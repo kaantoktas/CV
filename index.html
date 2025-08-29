@@ -12,11 +12,11 @@
     />
     <style>
       :root {
-        --primary-color: #4a4a4a;
-        --secondary-color: #888888;
+        --primary-color: #2c3e50;
+        --secondary-color: #7f8c8d;
         --background-color: #f8f9fa;
         --highlight-color: #e9ecef;
-        --link-color: #007bff;
+        --link-color: #3498db;
       }
 
       body {
@@ -39,12 +39,20 @@
       }
 
       .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: flex; /* Flexbox kullanarak düzeni sağlıyoruz */
+        justify-content: space-between; /* Öğeleri iki yana yaslıyoruz */
+        align-items: flex-start; /* Üstten hizalıyoruz */
         margin-bottom: 2.5rem;
         border-bottom: 2px solid var(--highlight-color);
         padding-bottom: 1.5rem;
+      }
+
+      .header-left {
+        text-align: left;
+      }
+
+      .header-right {
+        text-align: right;
       }
 
       .header h1 {
@@ -52,20 +60,24 @@
         font-size: 2.8rem;
         font-family: "Roboto", sans-serif;
         font-weight: 700;
+        color: var(--primary-color); /* Başlık rengini belirginleştiriyoruz */
       }
 
-      .header p {
+      .header .tagline {
         margin: 0.5rem 0 0;
+        color: var(--secondary-color);
+        font-size: 1.1rem;
+      }
+
+      .contact-info {
+        font-size: 0.95rem;
+        margin-top: 0; /* Üstteki boşluğu kaldırıyoruz */
         color: var(--secondary-color);
       }
 
-      .header .contact-info {
-        font-size: 0.95rem;
-        text-align: right;
-      }
-
-      .contact-info span {
-        display: block;
+      .contact-info span,
+      .contact-info a {
+        display: block; /* Her iletişim bilgisini ayrı satıra alıyoruz */
         margin-bottom: 0.2rem;
       }
 
@@ -95,10 +107,12 @@
         margin: 0;
         font-size: 1.2rem;
         font-weight: 500;
+        color: var(--primary-color);
       }
 
       .work-item .company,
-      .work-item .description {
+      .work-item .description,
+      .project-item .tech-stack {
         margin: 0.2rem 0;
         color: var(--secondary-color);
       }
@@ -128,12 +142,6 @@
         font-weight: 500;
       }
 
-      .project-item .tech-stack {
-        font-size: 0.9rem;
-        color: var(--secondary-color);
-        margin-top: 0.2rem;
-      }
-
       a {
         color: var(--link-color);
         text-decoration: none;
@@ -149,7 +157,7 @@
           align-items: flex-start;
           margin-left: 0;
         }
-        .header .contact-info {
+        .header-right {
           text-align: left;
           margin-top: 1rem;
         }
@@ -167,28 +175,32 @@
   <body>
     <div class="container">
       <div class="header">
-        <div>
+        <div class="header-left">
           <h1>Kaan Toktaş</h1>
-          <p>Full Stack Engineer dedicated to building products.</p>
+          <p class="tagline">
+            Full Stack Engineer focused on building innovative products.
+          </p>
         </div>
-        <div class="contact-info">
-          <span>kaantoktasx@gmail.com</span>
-          <span>+905514067901</span>
-          <span>Istanbul, Türkiye</span>
-          <a href="https://github.com/kaantoktas">GitHub</a> |
-          <a href="https://www.linkedin.com/in/kaan-toktaş-01a562323"
-            >LinkedIn</a
-          >
+        <div class="header-right">
+          <div class="contact-info">
+            <span>kaantoktasx@gmail.com</span>
+            <span>+90 551 406 7901</span>
+            <span>Istanbul, Türkiye</span>
+            <a href="https://github.com/kaantoktas">GitHub</a>
+            <a href="https://www.linkedin.com/in/kaan-toktaş-01a562323"
+              >LinkedIn</a
+            >
+          </div>
         </div>
       </div>
 
       <div class="section">
-        <h2 class="section-title">About</h2>
+        <h2 class="section-title">Summary</h2>
         <p>
-          Full Stack Engineer specializing in high-performance React
-          applications, scalable Node.js services, and real-time collaboration
-          systems. Experienced in technical architecture design and remote team
-          leadership.
+          A motivated and skilled Full Stack Engineer with experience in
+          building high-performance React applications and scalable Node.js
+          services. Proven ability to contribute to real-time collaboration
+          systems and apply strong skills in technical architecture design.
         </p>
       </div>
 
@@ -197,10 +209,10 @@
         <div class="work-item">
           <div>
             <h3>Intern Engineer</h3>
-            <p class="company">Karabük Üniversitesi</p>
+            <p class="company">Karabük University</p>
             <p class="description">
-              Works on developments for the university's official page and
-              various projects.
+              Contributed to the development and maintenance of the university's
+              official website and internal projects.
             </p>
           </div>
           <div class="date">2025 - Present</div>
@@ -208,21 +220,23 @@
         <div class="work-item">
           <div>
             <h3>Junior Software Engineer</h3>
-            <p class="company">Karabük Üniversitesi</p>
+            <p class="company">Karabük University</p>
             <p class="description">
-              Working on Android applications developed with artificial
-              intelligence.
+              Developed Android applications using artificial intelligence
+              models for disease detection.
             </p>
           </div>
-          <div class="date">05.03.2025-15.07.2025</div>
+          <div class="date">March 2025 - July 2025</div>
         </div>
       </div>
 
       <div class="section">
         <h2 class="section-title">Education</h2>
         <div class="education-item">
-          <h3>Bilgisayar Mühendisliği(İngilizce)</h3>
-          <p class="company">Karabük Üniversitesi</p>
+          <div>
+            <h3>Computer Engineering (English)</h3>
+            <p class="company">Karabük University</p>
+          </div>
           <p class="date">2022 - 2027</p>
         </div>
       </div>
@@ -231,11 +245,17 @@
         <h2 class="section-title">Skills</h2>
         <ul class="skills-list">
           <li>React/Next.js/Remix</li>
+          <li>JavaScript</li>
+          <li>C</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>C++</li>
           <li>Tailwind CSS</li>
           <li>WebSockets</li>
           <li>Node.js</li>
           <li>System Architecture</li>
-          <li>Remote Team Leadership</li>
+          <li>PostgreSQL</li>
+          <li>MongoDB</li>
         </ul>
       </div>
 
@@ -244,33 +264,63 @@
         <div class="project-item">
           <div>
             <h4>Qreatione</h4>
-            <p class="tech-stack">JavaScript, Next.js, React, CSS</p>
+            <p class="tech-stack">JavaScript, Next.js, React, CSS, MongoDB</p>
             <p>
-              Companies can provide faster and more practical service with
-              digital menu, order management and reporting solutions.
+              Developed a digital menu and order management system to help
+              businesses provide faster service with real-time reporting
+              solutions.
             </p>
-            <a href="https://www.qreatione.com.tr">Qreatione</a>
+            <a href="https://www.qreatione.com.tr">www.qreatione.com.tr</a>
           </div>
         </div>
         <div class="project-item">
           <div>
-            <h4>Amistad</h4>
-            <p class="tech-stack">JavaScript, Next.js, React, Tailwind CSS</p>
-            <p>Platform for easily sharing photos with family and friends.</p>
-            <a href="https://amistad1.netlify.app">Amistad</a>
+            <h4>Disease Detection Mobile Application</h4>
+            <p class="tech-stack">Dart, C++, CMake, Swift</p>
+            <p>
+              Designed and implemented a mobile application that uses a trained
+              YOLO model, converted to TF Lite, to provide fast and accurate
+              multi-disease analysis.
+            </p>
           </div>
         </div>
         <div class="project-item">
           <div>
-            <h4>Mitlight</h4>
-            <p class="tech-stack">Python, JavaScript, Next.js, Tailwind CSS</p>
+            <h4>License Plate Recognition System</h4>
+            <p class="tech-stack">Python, OpenCV, Tesseract OCR</p>
             <p>
-              Educational site that allows us to learn English through the songs
-              we listen to.
+              Project Description This project is an AI-based application that
+              instantly detects, analyzes, and reads license plates using a live
+              camera feed. The system utilizes a deep learning model (YOLOv8) to
+              identify vehicles in the image. Optical Character Recognition
+              (OCR) technology is integrated to read the license plate of the
+              detected vehicle area. This project showcases my practical skills
+              in machine learning and computer vision.
             </p>
-            <a href="https://mitlight.netlify.app">Mitlight</a>
           </div>
         </div>
+        <div class="project-item">
+          <div>
+            <h4>Holasapp</h4>
+            <p class="tech-stack">
+              Java, Spring WebFlux, WebSocket, PostgreSQL
+            </p>
+            <p>
+              Engineered a real-time chat application with a reactive
+              architecture. The project includes secure user authentication and
+              instant messaging via WebSocket, deployed within Docker
+              containers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Languages</h2>
+        <p>
+          **Turkish:** Native<br />
+          **English:** C1 (Advanced)
+        </p>
       </div>
     </div>
   </body>
