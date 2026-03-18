@@ -12,334 +12,264 @@
     />
     <style>
       :root {
-        --primary-color: #2c3e50;
-        --secondary-color: #7f8c8d;
-        --background-color: #f8f9fa;
-        --highlight-color: #e9ecef;
-        --link-color: #3498db;
+        --primary-color: #1a2a3a;
+        --secondary-color: #5d6d7e;
+        --accent-color: #3498db;
+        --background-color: #f4f7f6;
+        --highlight-color: #e5e8e8;
       }
 
       body {
         font-family: "Lato", sans-serif;
-        line-height: 1.6;
+        line-height: 1.5;
         margin: 0;
-        padding: 2rem;
+        padding: 1.5rem;
         background-color: var(--background-color);
         color: var(--primary-color);
       }
 
       .container {
-        max-width: 900px;
+        max-width: 850px;
         margin: auto;
         background: #fff;
-        padding: 3rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        position: relative;
+        padding: 2.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
       }
 
       .header {
         display: flex; 
         justify-content: space-between; 
-        align-items: flex-start; 
-        margin-bottom: 2.5rem;
-        border-bottom: 2px solid var(--highlight-color);
-        padding-bottom: 1.5rem;
-      }
-
-      .header-left {
-        text-align: left;
-      }
-
-      .header-right {
-        text-align: right;
+        align-items: center; 
+        margin-bottom: 2rem;
+        border-bottom: 3px solid var(--accent-color);
+        padding-bottom: 1rem;
       }
 
       .header h1 {
         margin: 0;
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         font-family: "Roboto", sans-serif;
         font-weight: 700;
-        color: var(--primary-color); 
+        letter-spacing: -1px;
       }
 
-      .header .tagline {
-        margin: 0.5rem 0 0;
-        color: var(--secondary-color);
-        font-size: 1.1rem;
+      .tagline {
+        margin: 0.2rem 0 0;
+        color: var(--accent-color);
+        font-size: 1.2rem;
+        font-weight: 500;
       }
 
       .contact-info {
-        font-size: 0.95rem;
-        margin-top: 0; 
+        font-size: 0.9rem;
+        text-align: right;
         color: var(--secondary-color);
       }
 
-      .contact-info span,
       .contact-info a {
-        display: block; 
-        margin-bottom: 0.2rem;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 700;
       }
 
       .section {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
       }
 
       .section-title {
-        font-size: 1.6rem;
-        font-weight: 500;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
         font-family: "Roboto", sans-serif;
-        border-bottom: 2px solid var(--highlight-color);
-        padding-bottom: 0.5rem;
-        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+        border-left: 5px solid var(--accent-color);
+        padding-left: 10px;
+        margin-bottom: 1rem;
+        background: var(--highlight-color);
+        padding-top: 5px;
+        padding-bottom: 5px;
       }
 
-      .work-item,
-      .project-item {
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .work-item, .project-item {
+        margin-bottom: 1.2rem;
+      }
+
+      .item-header {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1.5rem;
-        font-size: 1rem;
+        align-items: baseline;
       }
 
-      .work-item h3,
-      .project-item h4 {
+      h3, h4 {
         margin: 0;
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-size: 1.1rem;
         color: var(--primary-color);
       }
 
-      .work-item .company,
-      .work-item .description,
-      .project-item .tech-stack {
-        margin: 0.2rem 0;
+      .company, .tech-stack {
+        font-weight: 700;
+        font-size: 0.9rem;
         color: var(--secondary-color);
       }
 
-      .work-item .date,
-      .education-item .date {
+      .date {
+        font-size: 0.85rem;
         font-style: italic;
         color: var(--secondary-color);
-        min-width: 100px;
-        text-align: right;
       }
 
-      .skills-list {
-        list-style: none;
-        padding: 0;
+      .description {
+        font-size: 0.95rem;
+        margin-top: 5px;
+        text-align: justify;
+      }
+
+      .skills-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.6rem;
+        gap: 8px;
       }
 
-      .skills-list li {
-        background-color: var(--highlight-color);
-        color: var(--primary-color);
-        padding: 0.4rem 0.9rem;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        font-weight: 500;
+      .skill-tag {
+        background: var(--primary-color);
+        color: white;
+        padding: 3px 10px;
+        border-radius: 4px;
+        font-size: 0.8rem;
       }
 
-      a {
-        color: var(--link-color);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      @media (max-width: 768px) {
-        .header {
+      @media (max-width: 600px) {
+        .header, .item-header, .grid-2 {
           flex-direction: column;
-          align-items: flex-start;
-          margin-left: 0;
-        }
-        .header-right {
+          grid-template-columns: 1fr;
           text-align: left;
-          margin-top: 1rem;
         }
-        .work-item,
-        .project-item {
-          flex-direction: column;
-        }
-        .work-item .date {
-          text-align: left;
-          margin-top: 0.2rem;
-        }
+        .contact-info { text-align: left; margin-top: 1rem; }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <div class="header-left">
+        <div>
           <h1>Kaan Toktaş</h1>
-          <p class="tagline">
-            Full Stack Engineer focused on building innovative products.
-          </p>
+          <p class="tagline">Computer Engineer | Full Stack & Systems Enthusiast</p>
         </div>
-        <div class="header-right">
-          <div class="contact-info">
-            <span>kaantoktasx@gmail.com</span>
-            <span>+90 551 406 7901</span>
-            <span>Istanbul, Türkiye</span>
-            <a href="https://github.com/kaantoktas">GitHub</a>
-            <a href="https://www.linkedin.com/in/kaan-toktaş-01a562323"
-              >LinkedIn</a
-            >
-          </div>
+        <div class="contact-info">
+          kaantoktasx@gmail.com<br />
+          +90 551 406 7901 | Istanbul, TR<br />
+          <a href="https://github.com/kaantoktas">GitHub</a> | <a href="https://linkedin.com/in/kaan-toktas">LinkedIn</a>
         </div>
       </div>
 
       <div class="section">
-        <h2 class="section-title">Summary</h2>
-        <p>
-          A motivated and skilled Full Stack Engineer with experience in
-          building high-performance React applications and scalable Node.js
-          services. Proven ability to contribute to real-time collaboration
-          systems and apply strong skills in technical architecture design.
+        <h2 class="section-title">Professional Profile</h2>
+        <p class="description">
+          Computer Engineering student with a deep interest in <strong>computer architecture, server-side scalability, and hardware-software integration</strong>. Experienced in building full-stack applications and AI-driven systems. Focused on optimizing system performance through a solid understanding of low-level programming and modern distributed architectures.
         </p>
       </div>
 
       <div class="section">
-        <h2 class="section-title">Work Experience</h2>
-        <div class="work-item">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="grid-2">
           <div>
-            <h3>Intern Engineer</h3>
-            <p class="company">Karabuk University</p>
-            <p class="description">
-              Contributed to the development and maintenance of the university's
-              official website and internal projects.
-            </p>
-          </div>
-          <div class="date">August 2025 - September 2025</div>
-        </div>
-        <div class="work-item">
-          <div>
-            <h3>Software Developer</h3>
-            <p class="company">Karabuk University</p>
-            <p class="description">
-              Developed Android applications using artificial intelligence
-              models for disease detection.
-            </p>
-          </div>
-          <div class="date">March 2025 - July 2025</div>
-        </div>
-      </div>
-
-      <div class="section">
-        <h2 class="section-title">Education</h2>
-        <div class="education-item">
-          <div style="display: flex; justify-content: space-between;">
-            <div>
-              <h3>Computer Engineering (English)</h3>
-              <p class="company">Karabuk University</p>
+            <strong>Software & Frameworks:</strong>
+            <div class="skills-container" style="margin-top:5px;">
+              <span class="skill-tag">React / Next.js</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Python (AI/ML)</span>
+              <span class="skill-tag">Java (Spring)</span>
+              <span class="skill-tag">PostgreSQL/MongoDB</span>
             </div>
-            <p class="date">2022 - 2027</p>
+          </div>
+          <div>
+            <strong>Systems & Hardware:</strong>
+            <div class="skills-container" style="margin-top:5px;">
+              <span class="skill-tag">Computer Architecture</span>
+              <span class="skill-tag">Docker & Virtualization</span>
+              <span class="skill-tag">C / C++ / Assembly</span>
+              <span class="skill-tag">Server Management</span>
+              <span class="skill-tag">Linux / Unix Systems</span>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="section">
-        <h2 class="section-title">Certificates & Professional Programs</h2>
+        <h2 class="section-title">Experience</h2>
         <div class="work-item">
-          <div>
-            <h3>HSBC Step Up - Banking Program</h3>
-            <p class="company">HSBC Türkiye</p>
-            <p class="description">
-              Completed an intensive professional development program focused on banking dynamics, 
-              corporate culture, and financial technologies. Participated in leadership 
-              sessions and technical training tailored to the financial ecosystem.
-            </p>
+          <div class="item-header">
+            <h3>Intern Engineer</h3>
+            <span class="date">Aug 2025 - Sept 2025</span>
           </div>
-          <div class="date">March 2026</div>
+          <p class="company">Karabuk University</p>
+          <p class="description">Maintained university infrastructure, focusing on server-side performance and internal web tool optimization.</p>
+        </div>
+        
+        <div class="work-item">
+          <div class="item-header">
+            <h3>Software Developer</h3>
+            <span class="date">March 2025 - July 2025</span>
+          </div>
+          <p class="company">Karabuk University</p>
+          <p class="description">Integrated AI models into mobile environments, optimizing hardware utilization for real-time disease detection (TF Lite).</p>
         </div>
       </div>
 
       <div class="section">
-        <h2 class="section-title">Skills</h2>
-        <ul class="skills-list">
-          <li>React/Next.js/Remix</li>
-          <li>JavaScript</li>
-          <li>C</li>
-          <li>Python</li>
-          <li>Java</li>
-          <li>C++</li>
-          <li>Tailwind CSS</li>
-          <li>WebSockets</li>
-          <li>Node.js</li>
-          <li>System Architecture</li>
-          <li>PostgreSQL</li>
-          <li>MongoDB</li>
-        </ul>
-      </div>
+        <h2 class="section-title">Key Projects</h2>
+        <div class="project-item">
+          <div class="item-header">
+            <h4>Holasapp - Reactive Real-time Chat</h4>
+          </div>
+          <p class="tech-stack">Java, Spring WebFlux, Docker, WebSocket</p>
+          <p class="description">Designed a <strong>high-concurrency server architecture</strong> using reactive programming. Implemented containerization with Docker for scalable deployment and reliable server management.</p>
+        </div>
 
-      <div class="section">
-        <h2 class="section-title">Projects</h2>
         <div class="project-item">
-          <div>
-            <h4>Qreatione</h4>
-            <p class="tech-stack">JavaScript, Next.js, React, CSS, MongoDB</p>
-            <p>
-              Developed a digital menu and order management system to help
-              businesses provide faster service with real-time reporting
-              solutions.
-            </p>
-            <a href="https://www.qreatione.com.tr">www.qreatione.com.tr</a>
-          </div>
-        </div>
-        <div class="project-item">
-          <div>
-            <h4>Disease Detection Mobile Application</h4>
-            <p class="tech-stack">Dart, C++, CMake, Swift</p>
-            <p>
-              Designed and implemented a mobile application that uses a trained
-              YOLO model, converted to TF Lite, to provide fast and accurate
-              multi-disease analysis.
-            </p>
-          </div>
-        </div>
-        <div class="project-item">
-          <div>
+          <div class="item-header">
             <h4>License Plate Recognition System</h4>
-            <p class="tech-stack">Python, OpenCV, Tesseract OCR</p>
-            <p>
-              Project Description This project is an AI-based application that
-              instantly detects, analyzes, and reads license plates using a live
-              camera feed. The system utilizes a deep learning model (YOLOv8) to
-              identify vehicles in the image. Optical Character Recognition
-              (OCR) technology is integrated to read the license plate of the
-              detected vehicle area. This project showcases my practical skills
-              in machine learning and computer vision.
-            </p>
           </div>
+          <p class="tech-stack">Python, OpenCV, YOLOv8</p>
+          <p class="description">Developed an end-to-end computer vision pipeline. Optimized the model for <strong>low-latency hardware inference</strong> on live camera feeds.</p>
         </div>
+
         <div class="project-item">
-          <div>
-            <h4>Holasapp</h4>
-            <p class="tech-stack">
-              Java, Spring WebFlux, WebSocket, PostgreSQL
-            </p>
-            <p>
-              Engineered a real-time chat application with a reactive
-              architecture. The project includes secure user authentication and
-              instant messaging via WebSocket, deployed within Docker
-              containers.
-            </p>
+          <div class="item-header">
+            <h4>Library Automation & System Design</h4>
           </div>
+          <p class="tech-stack">C#, SQLite, System Architecture</p>
+          <p class="description">Built a desktop solution focusing on database normalization and efficient data retrieval patterns.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="section">
+          <h2 class="section-title">Education</h2>
+          <h3>Computer Engineering</h3>
+          <p class="company">Karabuk University (English)</p>
+          <p class="date">2022 - 2027</p>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Programs</h2>
+          <h3>HSBC Step Up</h3>
+          <p class="company">HSBC Türkiye - Banking Tech</p>
+          <p class="date">March 2026</p>
         </div>
       </div>
 
       <div class="section">
         <h2 class="section-title">Languages</h2>
-        <p>
-          **Turkish:** Native<br />
-          **English:** C1
-        </p>
+        <p><strong>Turkish:</strong> Native | <strong>English:</strong> C1 (Academic/Professional)</p>
       </div>
+
     </div>
   </body>
 </html>
