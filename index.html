@@ -6,7 +6,7 @@
     <title>Kaan Toktaş | Computer Engineer</title>
     <style>
         /* =====================================================
-           RESET & BASE
+           RESET & BASE (PC / ATS Standard A4 View)
         ===================================================== */
         * {
             margin: 0;
@@ -16,25 +16,31 @@
 
         body {
             min-height: 100vh;
-            background: #e9edf1;
+            background: #cbd5e1;
             font-family: Arial, Helvetica, sans-serif;
             color: #2f4358;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 24px 0;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
         /* =====================================================
-           9:16 RESUME CONTAINER
+           STANDARDIZED A4 PORTRAIT CONTAINER (1 : 1.414)
         ===================================================== */
         .resume {
-            width: 794px;
-            height: 1123px;
-            aspect-ratio: 1 / 1.414;
-            margin: 30px auto;
-            padding: 65px 70px;
+            width: 210mm;
+            height: 297mm;
+            max-height: 297mm;
+            padding: 14mm 16mm;
             background: #ffffff;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         /* =====================================================
@@ -44,8 +50,8 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 40px;
-            padding-bottom: 22px;
+            gap: 25px;
+            padding-bottom: 10px;
             border-bottom: 2px solid #e5e9ed;
         }
 
@@ -54,101 +60,97 @@
         }
 
         .header h1 {
-            font-size: 40px;
+            font-size: 24pt;
             line-height: 1.1;
             font-weight: 700;
             color: #263b50;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .subtitle {
-            font-size: 16px;
-            line-height: 1.4;
+            font-size: 10pt;
+            line-height: 1.3;
             color: #7b898f;
+            font-weight: 600;
         }
 
         /* =====================================================
            CONTACT
         ===================================================== */
         .contact {
-            min-width: 210px;
+            min-width: 190px;
             text-align: right;
-            font-size: 13px;
-            line-height: 1.7;
+            font-size: 8.5pt;
+            line-height: 1.45;
             color: #7b898f;
         }
 
         .contact a {
-            color: #60727c;
+            color: #4b6584;
             text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .contact a:hover {
-            color: #263b50;
         }
 
         /* =====================================================
            SECTIONS
         ===================================================== */
         section {
-            margin-top: 22px;
+            margin-top: 8px;
         }
 
         section h2 {
-            font-size: 20px;
+            font-size: 11pt;
             font-weight: 700;
             color: #263b50;
-            padding-bottom: 6px;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #e5e9ed;
+            padding-bottom: 2px;
+            margin-bottom: 6px;
+            border-bottom: 1.5px solid #e5e9ed;
+            letter-spacing: 0.2px;
         }
 
         section p {
-            font-size: 13.5px;
-            line-height: 1.5;
+            font-size: 8.5pt;
+            line-height: 1.35;
             color: #344b5e;
-            margin-bottom: 6px;
+            margin-bottom: 3px;
         }
 
         /* =====================================================
-           WORK EXPERIENCE & EDUCATION ITEMS
+           WORK EXPERIENCE & EDUCATION
         ===================================================== */
         .experience {
-            margin-bottom: 15px;
+            margin-bottom: 6px;
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 25px;
-            margin-bottom: 3px;
+            gap: 15px;
+            margin-bottom: 1px;
         }
 
         .job-header h3 {
-            font-size: 15.5px;
-            line-height: 1.3;
+            font-size: 9.5pt;
+            line-height: 1.25;
             font-weight: 700;
             color: #263b50;
         }
 
         .company {
-            font-size: 13px;
+            font-size: 8.5pt;
             color: #7b898f;
         }
 
         .date {
             flex-shrink: 0;
-            font-size: 12.5px;
+            font-size: 8pt;
             font-style: italic;
             color: #7b898f;
-            padding-top: 2px;
             white-space: nowrap;
         }
 
         .education {
-            margin-bottom: 14px;
+            margin-bottom: 5px;
         }
 
         /* =====================================================
@@ -157,16 +159,16 @@
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 5px;
         }
 
         .skills span {
             display: inline-block;
-            padding: 5px 11px;
-            border-radius: 20px;
+            padding: 3px 8px;
+            border-radius: 12px;
             background: #edf0f3;
             color: #344b5e;
-            font-size: 12px;
+            font-size: 8pt;
             line-height: 1.2;
         }
 
@@ -174,20 +176,20 @@
            PROJECTS
         ===================================================== */
         .project {
-            margin-bottom: 15px;
+            margin-bottom: 6px;
         }
 
         .project h3 {
-            font-size: 15.5px;
+            font-size: 9.2pt;
             font-weight: 700;
             color: #263b50;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .technologies {
-            font-size: 12px;
+            font-size: 8pt;
             color: #7b898f;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .project p {
@@ -198,21 +200,21 @@
            LANGUAGES
         ===================================================== */
         .languages {
-            font-size: 13.5px;
+            font-size: 8.5pt;
             color: #344b5e;
         }
 
         .separator {
-            margin: 0 8px;
+            margin: 0 6px;
             color: #8a969c;
         }
 
         /* =====================================================
-           PRINT SETTINGS
+           PRINT / DESKTOP PDF EXPORT
         ===================================================== */
         @media print {
             @page {
-                size: 900px 1600px;
+                size: A4 portrait;
                 margin: 0;
             }
 
@@ -223,10 +225,10 @@
             }
 
             .resume {
-                width: 900px;
-                height: 1600px;
+                width: 210mm;
+                height: 297mm;
                 margin: 0;
-                padding: 65px 70px;
+                padding: 14mm 16mm;
                 box-shadow: none;
             }
         }
@@ -256,10 +258,7 @@
     <section>
         <h2>Summary</h2>
         <p>
-            Computer Engineering student specializing in data infrastructure, enterprise server architecture, and system engineering[cite: 1, 2, 3]. Combines a strong passion for physical computer hardware, server infrastructure, and digital circuit design with robust data modeling and analytics capabilities[cite: 1, 2, 3].
-        </p>
-        <p>
-            Experienced in managing enterprise IT systems and server environments while leveraging SQL, Python, and MongoDB to build scalable backend architectures and derive actionable insights from complex datasets[cite: 1, 2, 3].
+            Computer Engineering student specializing in data infrastructure, enterprise server architecture, and system engineering[cite: 1, 2, 3]. Combines a strong passion for physical computer hardware, server infrastructure, and digital circuit design with robust data modeling and analytics capabilities[cite: 1, 2, 3]. Experienced in managing enterprise IT systems and server environments while leveraging SQL, Python, and MongoDB to build scalable backend architectures and derive actionable insights from complex datasets[cite: 1, 2, 3].
         </p>
     </section>
 
@@ -277,7 +276,7 @@
                 <div class="date">July 2026 – August 2026</div>
             </div>
             <p>
-                Managed corporate IT infrastructure, server setups, and network hardware diagnostics across company offices[cite: 1, 2, 3]. Supported IT and systems infrastructure for the TRT Tepebaşı Project, assisting in network hardware deployments and endpoint OS configurations[cite: 1, 2, 3].
+                Managed corporate IT infrastructure, server setups, and network hardware diagnostics[cite: 1, 2, 3]. Supported IT and systems infrastructure for the <strong>TRT Tepebaşı Project</strong>, assisting in network hardware deployments and endpoint OS configurations.
             </p>
         </div>
 
