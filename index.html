@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Kaan Toktaş | Computer Engineer</title>
 
     <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
 
         * {
             margin: 0;
@@ -14,335 +21,726 @@
             box-sizing: border-box;
         }
 
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
+
         body {
-            background: #ffffff;
+
+            min-height: 100vh;
+
+            background: #e9edf1;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             color: #2f4358;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.45;
+
         }
 
-        /* =========================
-           RESUME
-        ========================= */
+
+        /* =====================================================
+           9:16 CV
+        ===================================================== */
 
         .resume {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 55px 60px 70px;
+
+            width: 900px;
+
+            height: 1600px;
+
+            aspect-ratio: 9 / 16;
+
+            margin: 30px auto;
+
+            padding: 65px 70px;
+
+            background: #ffffff;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.12);
+
         }
 
-        /* =========================
+
+        /* =====================================================
            HEADER
-        ========================= */
+        ===================================================== */
 
         .header {
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: flex-start;
 
-            padding-bottom: 22px;
+            gap: 40px;
 
-            border-bottom: 2px solid #e6eaee;
+            padding-bottom: 25px;
+
+            border-bottom:
+                2px solid #e5e9ed;
+
         }
+
 
         .header-left {
+
             flex: 1;
+
         }
+
 
         .header h1 {
-            font-size: 38px;
+
+            font-size: 42px;
+
+            line-height: 1.1;
+
             font-weight: 700;
-            color: #2d4055;
-            margin-bottom: 4px;
+
+            color: #263b50;
+
+            margin-bottom: 8px;
+
         }
+
 
         .subtitle {
-            color: #7d8b8d;
+
             font-size: 17px;
+
+            line-height: 1.4;
+
+            color: #7b898f;
+
         }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
 
         .contact {
+
+            min-width: 210px;
+
             text-align: right;
-            color: #7d8b8d;
-            font-size: 14px;
-            line-height: 1.45;
-        }
-
-        .contact a {
-            color: #7d8b8d;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
-        section {
-            margin-top: 18px;
-        }
-
-        section h2 {
-            color: #2d4055;
-            font-size: 21px;
-            font-weight: 700;
-
-            margin-bottom: 9px;
-            padding-bottom: 3px;
-
-            border-bottom: 2px solid #e6eaee;
-        }
-
-        section p {
-            font-size: 14.5px;
-            color: #2f4358;
-            margin-bottom: 5px;
-        }
-
-        /* =========================
-           EXPERIENCE
-        ========================= */
-
-        .experience {
-            margin-bottom: 12px;
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .job-header h3,
-        .project h3 {
-            font-size: 16px;
-            color: #2d4055;
-            font-weight: 700;
-            margin-bottom: 2px;
-        }
-
-        .company {
-            color: #7f8d8f;
-            font-size: 14px;
-        }
-
-        .date {
-            color: #7f8d8f;
-            font-size: 13.5px;
-            font-style: italic;
-            white-space: nowrap;
-        }
-
-        /* =========================
-           EDUCATION
-        ========================= */
-
-        .education {
-            margin-bottom: 12px;
-        }
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skills span {
-            background: #e9edf1;
-            color: #2d4055;
-
-            padding: 5px 11px;
-
-            border-radius: 20px;
 
             font-size: 13px;
 
-            white-space: nowrap;
+            line-height: 1.7;
+
+            color: #7b898f;
+
         }
 
-        /* =========================
+
+        .contact a {
+
+            color: #60727c;
+
+            text-decoration: none;
+
+            transition: 0.2s;
+
+        }
+
+
+        .contact a:hover {
+
+            color: #263b50;
+
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
+
+        section {
+
+            margin-top: 25px;
+
+        }
+
+
+        section h2 {
+
+            font-size: 21px;
+
+            font-weight: 700;
+
+            color: #263b50;
+
+            padding-bottom: 7px;
+
+            margin-bottom: 12px;
+
+            border-bottom:
+                2px solid #e5e9ed;
+
+        }
+
+
+        section p {
+
+            font-size: 14px;
+
+            line-height: 1.55;
+
+            color: #344b5e;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        /* =====================================================
+           WORK EXPERIENCE
+        ===================================================== */
+
+        .experience {
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .job-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 25px;
+
+        }
+
+
+        .job-header h3 {
+
+            font-size: 16px;
+
+            line-height: 1.3;
+
+            font-weight: 700;
+
+            color: #263b50;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .company {
+
+            font-size: 13.5px;
+
+            color: #7b898f;
+
+        }
+
+
+        .date {
+
+            flex-shrink: 0;
+
+            font-size: 12.5px;
+
+            font-style: italic;
+
+            color: #7b898f;
+
+            padding-top: 2px;
+
+            white-space: nowrap;
+
+        }
+
+
+        /* =====================================================
+           EDUCATION
+        ===================================================== */
+
+        .education {
+
+            margin-bottom: 16px;
+
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
+
+        .skills {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+        }
+
+
+        .skills span {
+
+            display: inline-block;
+
+            padding: 6px 11px;
+
+            border-radius: 20px;
+
+            background: #edf0f3;
+
+            color: #344b5e;
+
+            font-size: 12.5px;
+
+            line-height: 1.2;
+
+        }
+
+
+        /* =====================================================
            PROJECTS
-        ========================= */
+        ===================================================== */
 
         .project {
-            margin-bottom: 11px;
+
+            margin-bottom: 17px;
+
         }
+
+
+        .project h3 {
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            color: #263b50;
+
+            margin-bottom: 3px;
+
+        }
+
 
         .technologies {
-            color: #7f8d8f;
-            font-size: 13.5px;
-            margin-bottom: 2px;
+
+            font-size: 12.5px;
+
+            color: #7b898f;
+
+            margin-bottom: 5px;
+
         }
 
-        /* =========================
+
+        .project p {
+
+            margin-bottom: 0;
+
+        }
+
+
+        /* =====================================================
            LANGUAGES
-        ========================= */
+        ===================================================== */
 
         .languages {
+
             font-size: 14px;
+
+            color: #344b5e;
+
         }
+
 
         .separator {
-            margin: 0 7px;
-            color: #6f7e86;
+
+            margin: 0 8px;
+
+            color: #8a969c;
+
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
 
-        @media (max-width: 750px) {
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 950px) {
 
             .resume {
-                padding: 35px 25px 50px;
+
+                width: 90vw;
+
+                height: calc(90vw * 16 / 9);
+
+                padding: 6vw;
+
+                margin: 20px auto;
+
             }
 
-            .header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .contact {
-                text-align: left;
-            }
 
             .header h1 {
-                font-size: 31px;
+
+                font-size: 4.2vw;
+
             }
+
 
             .subtitle {
-                font-size: 15px;
+
+                font-size: 1.7vw;
+
             }
 
-            .job-header {
-                flex-direction: column;
-                gap: 2px;
-            }
-
-            .date {
-                order: -1;
-            }
 
             section h2 {
-                font-size: 19px;
+
+                font-size: 2.1vw;
+
             }
+
+
+            section p {
+
+                font-size: 1.4vw;
+
+            }
+
         }
 
-        /* =========================
-           PRINT / PDF
-        ========================= */
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                background: #ffffff;
+
+            }
+
+
+            .resume {
+
+                width: 100vw;
+
+                height: 177.7778vw;
+
+                min-height: 100vh;
+
+                margin: 0;
+
+                padding: 30px 25px;
+
+                box-shadow: none;
+
+            }
+
+
+            .header {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+            }
+
+
+            .header h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .subtitle {
+
+                font-size: 14px;
+
+            }
+
+
+            .contact {
+
+                text-align: left;
+
+                font-size: 12px;
+
+            }
+
+
+            section {
+
+                margin-top: 17px;
+
+            }
+
+
+            section h2 {
+
+                font-size: 18px;
+
+            }
+
+
+            section p {
+
+                font-size: 12px;
+
+            }
+
+
+            .job-header {
+
+                flex-direction: column;
+
+                gap: 2px;
+
+            }
+
+
+            .date {
+
+                order: -1;
+
+                font-size: 11px;
+
+            }
+
+
+            .job-header h3 {
+
+                font-size: 14px;
+
+            }
+
+
+            .company {
+
+                font-size: 12px;
+
+            }
+
+
+            .skills span {
+
+                font-size: 10px;
+
+                padding: 5px 8px;
+
+            }
+
+
+            .project h3 {
+
+                font-size: 14px;
+
+            }
+
+
+            .technologies {
+
+                font-size: 10px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           PRINT
+        ===================================================== */
 
         @media print {
 
-            body {
-                background: white;
+            @page {
+
+                size: 900px 1600px;
+
+                margin: 0;
+
             }
+
+
+            body {
+
+                background: #ffffff;
+
+            }
+
 
             .resume {
-                width: 100%;
-                max-width: none;
-                padding: 35px 45px;
+
+                width: 900px;
+
+                height: 1600px;
+
+                margin: 0;
+
+                padding: 65px 70px;
+
+                box-shadow: none;
+
             }
 
-            section,
-            .experience,
-            .education,
-            .project {
-                break-inside: avoid;
-            }
         }
 
     </style>
 
 </head>
 
+
 <body>
+
 
 <div class="resume">
 
-    <!-- =========================
+
+    <!-- =====================================================
          HEADER
-    ========================= -->
+    ===================================================== -->
 
     <header class="header">
 
+
         <div class="header-left">
 
-            <h1>Kaan Toktaş</h1>
+            <h1>
+                Kaan Toktaş
+            </h1>
+
 
             <div class="subtitle">
-                Computer Engineer | Data Infrastructure & Systems Engineer
+
+                Computer Engineer |
+                Data Infrastructure & Systems Engineer
+
             </div>
 
         </div>
+
 
         <div class="contact">
 
-            <div>kaantoktasx@gmail.com</div>
-
-            <div>+90 551 406 7901</div>
-
-            <div>Istanbul, Türkiye</div>
-
             <div>
-                <a href="#" target="_blank">GitHub</a>
+                kaantoktasx@gmail.com
             </div>
 
+
             <div>
-                <a href="#" target="_blank">LinkedIn</a>
+                +90 551 406 7901
+            </div>
+
+
+            <div>
+                Istanbul, Türkiye
+            </div>
+
+
+            <div>
+
+                <a href="#"
+                   target="_blank">
+
+                    GitHub
+
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <a href="#"
+                   target="_blank">
+
+                    LinkedIn
+
+                </a>
+
             </div>
 
         </div>
+
 
     </header>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          SUMMARY
-    ========================= -->
+    ===================================================== -->
 
     <section>
 
-        <h2>Summary</h2>
+
+        <h2>
+            Summary
+        </h2>
+
 
         <p>
+
             Computer Engineering student specializing in data infrastructure,
             enterprise server architecture, and system engineering. Combines a
             strong passion for physical computer hardware, server infrastructure,
             and digital circuit design with robust data modeling and analytics
             capabilities.
+
         </p>
 
+
         <p>
+
             Experienced in managing enterprise IT systems and server environments
             while leveraging SQL, Python, and MongoDB to build scalable backend
             architectures and derive actionable insights from complex datasets.
+
         </p>
+
 
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          WORK EXPERIENCE
-    ========================= -->
+    ===================================================== -->
 
     <section>
 
-        <h2>Work Experience</h2>
 
+        <h2>
+            Work Experience
+        </h2>
+
+
+
+        <!-- JOB 1 -->
 
         <div class="experience">
 
+
             <div class="job-header">
+
 
                 <div>
 
@@ -350,30 +748,47 @@
                         IT & Systems Engineering Intern
                     </h3>
 
+
                     <div class="company">
-                        Optimal Project Management (Optimal PMO)
+
+                        Optimal Project Management
+                        (Optimal PMO)
+
                     </div>
 
                 </div>
 
+
                 <div class="date">
+
                     July 2026 – August 2026
+
                 </div>
+
 
             </div>
 
+
             <p>
+
                 Managed corporate IT infrastructure, server setups, and network
                 hardware. Conducted hardware diagnostics, system recovery, and
                 endpoint OS deployments across company offices.
+
             </p>
+
 
         </div>
 
 
+
+        <!-- JOB 2 -->
+
         <div class="experience">
 
+
             <div class="job-header">
+
 
                 <div>
 
@@ -381,29 +796,45 @@
                         Intern Engineer
                     </h3>
 
+
                     <div class="company">
+
                         Karabuk University
+
                     </div>
 
                 </div>
 
+
                 <div class="date">
+
                     August 2025 – September 2025
+
                 </div>
+
 
             </div>
 
+
             <p>
+
                 Optimized university web infrastructure and managed internal
                 server operations for enhanced system stability.
+
             </p>
+
 
         </div>
 
 
+
+        <!-- JOB 3 -->
+
         <div class="experience">
 
+
             <div class="job-header">
+
 
                 <div>
 
@@ -411,41 +842,62 @@
                         Software Developer
                     </h3>
 
+
                     <div class="company">
+
                         Karabuk University
+
                     </div>
 
                 </div>
 
+
                 <div class="date">
+
                     March 2025 – July 2025
+
                 </div>
+
 
             </div>
 
+
             <p>
+
                 Developed and integrated AI models for disease detection,
                 focusing on efficient model inference, data processing,
                 and hardware utilization.
+
             </p>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          EDUCATION
-    ========================= -->
+    ===================================================== -->
 
     <section>
 
-        <h2>Education & Programs</h2>
 
+        <h2>
+            Education & Programs
+        </h2>
+
+
+
+        <!-- EDUCATION -->
 
         <div class="education">
 
+
             <div class="job-header">
+
 
                 <div>
 
@@ -453,24 +905,37 @@
                         Computer Engineering (English)
                     </h3>
 
+
                     <div class="company">
+
                         Karabuk University
+
                     </div>
 
                 </div>
 
+
                 <div class="date">
+
                     2022 – 2027
+
                 </div>
 
+
             </div>
+
 
         </div>
 
 
+
+        <!-- PROGRAM -->
+
         <div class="education">
 
+
             <div class="job-header">
+
 
                 <div>
 
@@ -478,166 +943,256 @@
                         HSBC Step Up - Banking Program
                     </h3>
 
+
                     <div class="company">
+
                         HSBC Türkiye
+
                     </div>
 
                 </div>
 
+
                 <div class="date">
+
                     January 2026
+
                 </div>
+
 
             </div>
 
+
             <p>
+
                 Gained deep insights into the financial ecosystem and fintech
                 integration. Focused on banking dynamics and corporate
                 leadership strategies.
+
             </p>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          TECHNICAL SKILLS
-    ========================= -->
+    ===================================================== -->
 
     <section>
 
-        <h2>Technical Skills</h2>
+
+        <h2>
+            Technical Skills
+        </h2>
+
 
         <div class="skills">
+
 
             <span>
                 Server Management & Linux
             </span>
 
+
             <span>
                 Data Infrastructure & SQL Design
             </span>
+
 
             <span>
                 Computer Architecture & Physical Hardware
             </span>
 
+
             <span>
                 SQL & Data Analytics
             </span>
+
 
             <span>
                 PostgreSQL / MongoDB / SQLite
             </span>
 
+
             <span>
                 Python (Pandas/Data Analysis/AI)
             </span>
+
 
             <span>
                 Java (Spring/WebFlux)
             </span>
 
+
             <span>
                 Docker & Virtualization
             </span>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          KEY PROJECTS
-    ========================= -->
+    ===================================================== -->
 
     <section>
 
-        <h2>Key Projects</h2>
 
+        <h2>
+            Key Projects
+        </h2>
+
+
+
+        <!-- PROJECT 1 -->
 
         <div class="project">
+
 
             <h3>
                 Supply Chain Management System
             </h3>
 
+
             <div class="technologies">
-                Java, Spring Boot, SQL, Docker, RESTful APIs
+
+                Java, Spring Boot, SQL, Docker,
+                RESTful APIs
+
             </div>
 
+
             <p>
+
                 Designed and implemented an enterprise supply chain tracking
                 system with real-time inventory tracking, automated order
                 workflows, and relational database architecture optimized for
                 high-throughput analytical operations.
+
             </p>
+
 
         </div>
 
 
+
+        <!-- PROJECT 2 -->
+
         <div class="project">
+
 
             <h3>
                 Holasapp - Reactive Architecture
             </h3>
 
+
             <div class="technologies">
-                Java, Spring WebFlux, WebSocket, PostgreSQL, Docker
+
+                Java, Spring WebFlux, WebSocket,
+                PostgreSQL, Docker
+
             </div>
 
+
             <p>
+
                 Developed a real-time messaging server using Java.
                 Implemented reactive streams for high-concurrency database
                 operations and ensured scalability via Docker.
+
             </p>
+
 
         </div>
 
 
+
+        <!-- PROJECT 3 -->
+
         <div class="project">
+
 
             <h3>
                 License Plate Recognition System
             </h3>
 
+
             <div class="technologies">
+
                 Python, OpenCV, YOLOv8
+
             </div>
 
+
             <p>
+
                 Built an AI-driven vision system optimized for live camera
                 feeds, focusing on system-level latency and character
                 recognition accuracy.
+
             </p>
+
 
         </div>
 
+
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          LANGUAGES
-    ========================= -->
+    ===================================================== -->
 
     <section>
 
-        <h2>Languages</h2>
+
+        <h2>
+            Languages
+        </h2>
+
 
         <p class="languages">
 
-            <strong>Turkish:</strong> Native
 
-            <span class="separator">|</span>
+            <strong>
+                Turkish:
+            </strong>
 
-            <strong>English:</strong> C1 (Academic/Professional)
+            Native
+
+
+            <span class="separator">
+                |
+            </span>
+
+
+            <strong>
+                English:
+            </strong>
+
+            C1 (Academic/Professional)
+
 
         </p>
 
+
     </section>
+
 
 </div>
 
+
 </body>
+
 </html>
