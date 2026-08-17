@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
     <style>
         @page {
-            size: A4 portrait;
-            margin: 10mm 12mm;
+            size: 1080px 1920px;
+            margin: 0;
         }
 
         * {
@@ -19,19 +19,24 @@
 
         body {
             font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-size: 8.5pt;
-            line-height: 1.35;
+            font-size: 14pt;
+            line-height: 1.45;
             color: #2c3e50;
-            margin: 0;
-            padding: 0;
+            margin: 0 auto;
+            padding: 55px 65px;
             background-color: #ffffff;
+            width: 1080px;
+            min-height: 1920px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         /* Header Section */
         .header {
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 8px;
-            margin-bottom: 10px;
+            border-bottom: 2.5px solid #e9ecef;
+            padding-bottom: 16px;
+            margin-bottom: 18px;
         }
 
         .header-table {
@@ -47,24 +52,24 @@
         .header-right {
             vertical-align: top;
             text-align: right;
-            font-size: 8pt;
+            font-size: 13pt;
             color: #7f8c8d;
-            line-height: 1.35;
+            line-height: 1.45;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 20pt;
+            font-size: 34pt;
             font-family: "Roboto", sans-serif;
             font-weight: 700;
             color: #2c3e50;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.5px;
         }
 
         .header .tagline {
-            margin: 3px 0 0 0;
+            margin: 6px 0 0 0;
             color: #7f8c8d;
-            font-size: 9.5pt;
+            font-size: 16pt;
             font-weight: 500;
         }
 
@@ -76,24 +81,25 @@
 
         /* Section Styling */
         .section {
-            margin-bottom: 10px;
+            margin-bottom: 16px;
         }
 
         .section-title {
-            font-size: 11pt;
+            font-size: 18pt;
             font-weight: 700;
             font-family: "Roboto", sans-serif;
             color: #2c3e50;
-            border-bottom: 1.5px solid #e9ecef;
-            padding-bottom: 2px;
-            margin: 0 0 6px 0;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 4px;
+            margin: 0 0 10px 0;
+            letter-spacing: 0.3px;
         }
 
         /* Work & Education Items */
         .item-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 6px;
+            margin-bottom: 12px;
         }
 
         .item-main {
@@ -106,46 +112,46 @@
             text-align: right;
             font-style: italic;
             color: #7f8c8d;
-            font-size: 8pt;
+            font-size: 13pt;
             white-space: nowrap;
-            width: 130px;
+            width: 220px;
         }
 
         .item-title {
-            font-size: 9.5pt;
+            font-size: 15.5pt;
             font-weight: 700;
             color: #2c3e50;
             margin: 0;
         }
 
         .company {
-            font-size: 8.5pt;
+            font-size: 14pt;
             color: #7f8c8d;
-            margin: 1px 0 2px 0;
+            margin: 2px 0 4px 0;
         }
 
         .description {
-            font-size: 8.5pt;
+            font-size: 13.5pt;
             color: #2c3e50;
-            margin: 2px 0 0 0;
+            margin: 3px 0 0 0;
         }
 
         /* Projects Section */
         .project-item {
-            margin-bottom: 6px;
+            margin-bottom: 12px;
         }
 
         .project-title {
-            font-size: 9pt;
+            font-size: 15pt;
             font-weight: 700;
             color: #2c3e50;
             margin: 0;
         }
 
         .tech-stack {
-            font-size: 8pt;
+            font-size: 13pt;
             color: #7f8c8d;
-            margin: 1px 0 2px 0;
+            margin: 2px 0 4px 0;
         }
 
         /* Skills Pill List */
@@ -159,12 +165,12 @@
             display: inline-block;
             background-color: #e9ecef;
             color: #2c3e50;
-            padding: 2px 7px;
-            border-radius: 12px;
-            font-size: 8pt;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12.5pt;
             font-weight: 500;
-            margin-right: 4px;
-            margin-bottom: 4px;
+            margin-right: 6px;
+            margin-bottom: 8px;
         }
 
         a {
@@ -173,7 +179,7 @@
         }
 
         p {
-            margin: 0 0 3px 0;
+            margin: 0 0 4px 0;
         }
     </style>
 </head>
@@ -200,7 +206,7 @@
 
     <!-- Summary -->
     <div class="section">
-        <div class="section-title">Summary</div>
+        <div class="section-title">SUMMARY</div>
         <p class="description">
             Computer Engineering student specializing in data infrastructure, enterprise server architecture, and system engineering[cite: 3]. Combines a strong passion for physical computer hardware, server infrastructure, and digital circuit design with robust data modeling and analytics capabilities[cite: 3]. Experienced in managing enterprise IT systems and server environments while leveraging SQL, Python, and MongoDB to build scalable backend architectures and derive actionable insights from complex datasets[cite: 3].
         </p>
@@ -208,7 +214,7 @@
 
     <!-- Work Experience -->
     <div class="section">
-        <div class="section-title">Work Experience</div>
+        <div class="section-title">WORK EXPERIENCE</div>
 
         <table class="item-table">
             <tr>
@@ -216,7 +222,7 @@
                     <div class="item-title">IT & Systems Engineering Intern</div>
                     <div class="company">Optimal Project Management (Optimal PMO)</div>
                     <div class="description">
-                        Managed corporate IT infrastructure, server setups, and network hardware[cite: 3]. Supported systems and IT infrastructure for the <strong>TRT Tepebaşı Project</strong>; conducted hardware diagnostics, system recovery, and endpoint OS deployments across company offices[cite: 3].
+                        Managed corporate IT infrastructure, server setups, and network hardware diagnostics[cite: 3]. Supported IT and systems infrastructure for the <strong>TRT Tepebaşı Project</strong>, assisting in network hardware deployments and endpoint OS configurations.
                     </div>
                 </td>
                 <td class="item-date">July 2026 – August 2026</td>
@@ -252,7 +258,7 @@
 
     <!-- Education & Programs -->
     <div class="section">
-        <div class="section-title">Education & Programs</div>
+        <div class="section-title">EDUCATION & PROGRAMS</div>
 
         <table class="item-table">
             <tr>
@@ -280,7 +286,7 @@
 
     <!-- Technical Skills -->
     <div class="section">
-        <div class="section-title">Technical Skills</div>
+        <div class="section-title">TECHNICAL SKILLS</div>
         <ul class="skills-list">
             <li><strong>Server Management & Linux</strong></li>
             <li><strong>Data Infrastructure & SQL Design</strong></li>
@@ -295,7 +301,7 @@
 
     <!-- Key Projects -->
     <div class="section">
-        <div class="section-title">Key Projects</div>
+        <div class="section-title">KEY PROJECTS</div>
 
         <div class="project-item">
             <div class="project-title">Supply Chain Management System</div>
@@ -309,7 +315,7 @@
             <div class="project-title">Holasapp - Reactive Architecture</div>
             <div class="tech-stack">Java, Spring WebFlux, WebSocket, PostgreSQL, Docker</div>
             <div class="description">
-                Developed a real-time messaging server using Java[cite: 3]. Implemented reactive streams for high-concurrency database operations and ensured scalability via Docker[cite: 3].
+                Developed a real-time messaging server using <strong>Java</strong>[cite: 3]. Implemented reactive streams for high-concurrency database operations and ensured scalability via Docker[cite: 3].
             </div>
         </div>
 
@@ -324,7 +330,7 @@
 
     <!-- Languages -->
     <div class="section">
-        <div class="section-title">Languages</div>
+        <div class="section-title">LANGUAGES</div>
         <p class="description">
             <strong>Turkish:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> C1 (Academic/Professional)[cite: 3]
         </p>
